@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IoT Hotel</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+    html, body {
+      display: flex;
+      justify-content: center;
+      margin:0;
+      padding:0;
+      font-family: Serif;
+      height: 100%;
+      width: 100%;
+      }
+    .section-top{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("/static/hotel_room/main.3.jpg");
+    animation: slide 10s infinite;
+    }
+    .content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        text-align:center;
+    }
+    .content h1{
+    color: white;
+    font-size: 40px;
+    letter-spacing: 7px;
+    }
+    .content h2{
+    color: white;
+    font-size: 30px;
+    letter-spacing: 5px;
+    }
+    @keyframes slide{
+    15%{
+    background-image: url("/static/anh1.jpg");
+    }
+    33%{
+    background-image: url("/static/anh2.jpg");
+    }
+    67%{
+    background-image: url("/static/anh4.jpg");
+    }
+    }
+</style>
+</head>
+<body>
+        <h1>THCS Hoàng Vân </h1>
+        <br>
+        <h1> Hệ thống giám sát </h1>
+           <h3><img src="{{ url_for('video_feed') }}" width="70%" height="80%"></h3>
+<!--
+<div align="center">
+    <h1>Chào mừng bạn đến với khách sạn</h1>
+<h2> Để bắt đầu đăng ký lưu trú hãy nhấn vào nút bắt đầu</h2>
+
+    </div>
+-->
+</body>
+</html>
